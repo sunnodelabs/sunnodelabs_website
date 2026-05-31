@@ -69,5 +69,5 @@ Setup:
 After that, each form submission will append a row like:
 
 ```text
-<user email/name> | <user id> | LineIQ | <current timestamp> | Requested
+<user email/name> | <generated request id> | LineIQ | <current timestamp> | Requested
 ```
