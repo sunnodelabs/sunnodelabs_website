@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Account Deletion | SunNodeLabs</title>
+    <meta
+      name="description"
+      content="Request deletion of LineIQ account or user data from SunNodeLabs."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="SunNodeLabs home">
+        <span class="brand-mark">SN</span>
+        <span>SunNodeLabs</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html#lineiq">LineIQ</a>
+        <a href="index.html#company">Company</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="deletion.html">Delete Data</a>
+        <a class="nav-pill" href="support.html">Support</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">LineIQ data request</p>
+        <h1>Request Account or Data Deletion</h1>
+        <p class="hero-text">
+          Use this form to request deletion of your LineIQ account data or
+          associated user data. SunNodeLabs will review your request and update
+          the status after processing.
+        </p>
+      </section>
+
+      <article class="content-card form-card">
+        <section>
+          <h2>Deletion Request Form</h2>
+          <p>
+            Please provide enough information for us to identify the correct
+            LineIQ record. If LineIQ does not use accounts on your device, enter
+            the player ID, device ID, or any identifier shown inside the game.
+          </p>
+
+          <div class="form-notice" id="deletionConfigNotice" hidden>
+            This form is not connected yet. Add your Google Apps Script Web App
+            URL in <code>deletion.html</code> before publishing.
+          </div>
+
+          <form
+            class="request-form"
+            id="deletionRequestForm"
+            method="post"
+            target="deletionSubmitFrame"
+            data-endpoint="https://script.google.com/macros/s/AKfycbygC0OVPG4SUshEipYj7Yr2r7nsmdSsyjsDkjlJURlS7iJWytF4JmWdfmoXpkg0sGDr/exec"
+          >
+            <label for="user">
+              User email or name
+              <input
+                id="user"
+                name="user"
+                type="text"
+                autocomplete="email"
+                required
+                placeholder="yourname@example.com"
+              />
+            </label>
+
+            <label for="userId">
+              User ID
+              <input
+                id="userId"
+                name="userId"
+                type="text"
+                required
+                placeholder="LineIQ player ID or device/user identifier"
+              />
+            </label>
+
+            <label for="game">
+              Game
+              <select id="game" name="game" required>
+                <option value="LineIQ">LineIQ</option>
+              </select>
+            </label>
+
+            <input type="hidden" name="status" value="Requested" />
+            <button class="button button-primary" type="submit">
+              Submit Deletion Request
+            </button>
+          </form>
+
+          <iframe
+            class="hidden-frame"
+            name="deletionSubmitFrame"
+            title="Deletion request submission"
+          ></iframe>
+
+          <p class="form-message" id="deletionFormMessage" role="status"></p>
+        </section>
+
+        <section>
+          <h2>Data Covered by This Request</h2>
+          <p>
+            This request covers LineIQ account data or user data associated with
+            the user identifier you provide. Some information may be retained
+            where required for legal, security, fraud-prevention, or compliance
+            reasons.
+          </p>
+        </section>
+
+        <section>
+          <h2>What Happens Next</h2>
+          <p>
+            Your request is recorded with status <strong>Requested</strong>.
+            SunNodeLabs will review the details, process eligible deletion
+            requests, and update the request status in our records.
+          </p>
+          <p>
+            You can also contact
+            <a href="mailto:sunnodelabs@gmail.com">sunnodelabs@gmail.com</a>
+            for deletion or privacy questions.
+          </p>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> SunNodeLabs. All rights reserved.</p>
+      <div>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="deletion.html">Delete Data</a>
+        <a href="support.html">Support</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

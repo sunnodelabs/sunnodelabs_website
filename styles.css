@@ -512,6 +512,74 @@ p {
   font-weight: 800;
 }
 
+.form-card {
+  max-width: 860px;
+}
+
+.request-form {
+  display: grid;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.request-form label {
+  display: grid;
+  gap: 8px;
+  color: var(--text);
+  font-weight: 850;
+}
+
+.request-form input,
+.request-form select,
+.request-form textarea {
+  width: 100%;
+  color: var(--text);
+  background: var(--panel-dark);
+  border: 2px solid rgba(130, 232, 203, 0.45);
+  border-radius: 14px;
+  padding: 14px 16px;
+  font: inherit;
+  outline: none;
+}
+
+.request-form textarea {
+  resize: vertical;
+}
+
+.request-form input:focus,
+.request-form select:focus,
+.request-form textarea:focus {
+  border-color: var(--mint);
+  box-shadow: 0 0 0 4px rgba(130, 232, 203, 0.14);
+}
+
+.form-notice,
+.form-message {
+  margin-top: 20px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(255, 204, 20, 0.12);
+  border: 1px solid rgba(255, 204, 20, 0.45);
+  color: var(--text);
+}
+
+.form-message {
+  display: none;
+}
+
+.form-message.is-visible {
+  display: block;
+}
+
+.hidden-frame {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
 @media (max-width: 860px) {
   .site-header,
   .site-nav,
